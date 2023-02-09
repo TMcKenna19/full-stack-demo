@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
+const cors = require("cors"); //install  on backend server "npm install cors"
 const port = 8000;
+
+//this is so client/backend servers can communicate 
+app.use(cors());
 
 // add in our connection to config file
 require("./server/config/mongoose.config");
