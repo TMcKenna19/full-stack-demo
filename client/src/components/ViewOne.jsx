@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 const ViewOne = props => {
     const [oneGame, setOneGame] = useState(null)
     const {_id} = useParams();
+    
     useEffect(()=> {
         axios.get("http://localhost:8000/api/games/" + _id)
         .then(res => setOneGame(res.data[0]))
@@ -20,6 +21,7 @@ const ViewOne = props => {
                     <h3>Min Players: {oneGame.minPlayers}</h3>
                 </div> : ""
             }
+            
         </div>
     );
 }

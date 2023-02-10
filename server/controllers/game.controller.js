@@ -33,3 +33,4 @@ module.exports.deleteGame = (req, res) => {
     .then(res.json({message: "Game was successfully deleted"}))
     .catch(err => res.json({message: "Error-> deleteGame", error:err}))
 }
+

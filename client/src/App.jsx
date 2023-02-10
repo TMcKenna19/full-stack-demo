@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ViewAll from './components/ViewAll';
 import {Routes, Route, Link} from 'react-router-dom'
 import AddForm from './components/AddForm.jsx';
