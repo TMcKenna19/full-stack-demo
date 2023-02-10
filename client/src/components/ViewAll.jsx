@@ -6,12 +6,13 @@ import {Link} from "react-router-dom";
 const ViewAll = props => {
     const [games, setGames] = useState(null);
     // const [update, setUpdate] = useState(false); // store update in state, useEffect will rerender updated list after item is deleted (ln 14 & 18) this is for delete button 
+    // use this for when delete and show all are on component 
 
     useEffect(()=>{
         axios.get("http://localhost:8000/api/games")
         .then(res => setGames(res.data))
         .catch(err => console.log(err))
-    }, []) // <- pass update [update]
+    }, []) // <- pass update [update] 
         
     // const handleDelete = id => {
     //     axios.delete("http://localhost:8000/api/games/delete/" + id)
