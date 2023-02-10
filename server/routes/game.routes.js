@@ -14,5 +14,5 @@ module.exports = app => {
     app.put("/api/games/update/:_id", GameController.updateGame);
 
     // delete 
-    app.delete("/api/games/delete/:id", GameController.deleteGame);
+    app.delete("/api/games/delete/:_id", GameController.deleteGame);
 }
